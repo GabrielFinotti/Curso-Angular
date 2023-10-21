@@ -10,16 +10,8 @@ import {
 
 @Component({
   selector: 'app-root',
-  template: `
-    {{ valor }}
-    <app-title *ngIf="destruir"></app-title>
-    <br /><br />
-    <button type="button" (click)="destruirComponent()">
-      Destruir componente
-    </button>
-    <button type="button" (click)="adicionar()">Adicionar</button>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent
   implements
