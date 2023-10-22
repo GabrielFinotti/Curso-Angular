@@ -19,3 +19,9 @@
   style="background: red; width: 300px; height: 300px"
 ></div>
 <p>{{ position.x }} e {{ position.y }}</p>
+<br /><br />
+
+<h2>Two-Way binding</h2>
+<!-- Para fazer o ngModel funcionar, tem que importa-lo do FormModule no app.module -->
+<input type="text" [(ngModel)]="nome" />
+<p>{{ nome }}</p>
