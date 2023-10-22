@@ -5,9 +5,17 @@
 
 <p>Quanto é {{ idade }} + 1?</p>
 <p>{{ idade + 1 }}</p>
+<br /><br />
 
 <h2>Property Binding</h2>
 <button type="button" [disabled]="checkedDisable">Button</button>
+<br /><br />
 
 <h2>Event Binding</h2>
-
+<button type="button" (click)="alertaInfo($event)">Evento</button>
+<!-- $event é utilzado para adquirir todas as informações sobre a tag/elemento html -->
+<div
+  (mousemove)="mouseMoveTest($event)"
+  style="background: red; width: 300px; height: 300px"
+></div>
+<p>{{ position.x }} e {{ position.y }}</p>
