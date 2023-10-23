@@ -1,0 +1,13 @@
+<!-- Verificar se a condição é verdadeira ou falso! -->
+<h1>NgIf</h1>
+<p *ngIf="condition; else elseBlock">Testando</p>
+<ng-template #elseBlock>
+  <p>false</p>
+</ng-template>
+<hr />
+<p *ngIf="conditionClick">true</p>
+<p *ngIf="!conditionClick">false</p>
+<button type="button" (click)="onClick()">Clicar</button>
+<br><br>
+<!--  -->
+<h1>NgFor</h1>
