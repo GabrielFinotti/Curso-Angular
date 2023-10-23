@@ -10,13 +10,13 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public conditionClick: boolean = true;
 
   ngOnInit(): void {
-    setInterval(() => {
-      if (this.condition) {
-        this.condition = !this.condition;
-      } else {
-        this.condition = true;
-      }
-    }, 2000);
+    // setInterval(() => {
+    //   if (this.condition) {
+    //     this.condition = !this.condition;
+    //   } else {
+    //     this.condition = true;
+    //   }
+    // }, 2000);
   }
 
   public onClick() {
