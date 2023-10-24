@@ -1,4 +1,20 @@
 <!-- Utilizado para mudar valores de classes -->
 <h1 [ngClass]="{ active: valor, disabled: !valor }">NgClass</h1>
 <br /><br />
+<hr />
+<!-- Utilizado para mudanças de valores de estilo -->
 <h1 [ngStyle]="{ height: heightpx, background: backgroundColor }">NgStyle</h1>
+<br /><br />
+<hr />
+<!-- adiciona vinculação de dados bidirecional a um elemento de formulário HTML -->
+<h1>NgModel</h1>
+<input type="text" [(ngModel)]="nome" />
+<p>{{ nome }}</p>
+<button type="button" (click)="salvarNome()">Salvar</button>
+<br /><br />
+<li *ngFor="let item of list; let i = index" (click)="excluirNome(i)">
+  {{ i }} - {{ item.nome }}
+</li>
+<p *ngIf="list == null">Nenhum nome salvo!</p>
+<br /><br />
+<hr />

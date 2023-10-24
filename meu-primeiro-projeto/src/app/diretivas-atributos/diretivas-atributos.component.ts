@@ -9,6 +9,8 @@ export class DiretivasAtributosComponent implements OnInit {
   public valor: boolean = true;
   public heightpx: string = '20px';
   public backgroundColor: string = 'green';
+  public nome!: string;
+  public list!: Array<{ nome: string }>;
 
   ngOnInit(): void {
     setInterval(() => {
@@ -26,5 +28,20 @@ export class DiretivasAtributosComponent implements OnInit {
         this.backgroundColor = 'green';
       }
     }, 2000);
+  }
+
+  public salvarNome(): void {
+    if (this.list == null) {
+      this.list = [];
+      this.list.push({ nome: this.nome });
+      this.nome = '';
+    } else {
+      this.list.push({ nome: this.nome });
+      this.nome = '';
+    }
+  }
+
+  public excluirNome(event: number) {
+    this.list.splice(event, 1);
   }
 }
