@@ -17,3 +17,12 @@
   </li>
 </ul>
 <button type="button" (click)="onClickAddList()">Clicar</button>
+<br /><br />
+<h1>NgSwitch</h1>
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Dener'">Dener</p>
+  <p *ngSwitchCase="'Finotti'">Finotti</p>
+  <p *ngSwitchCase="'Nay'">Nay</p>
+</div>
+<button type="button" (click)="trocarNome()">Troque o nome</button>
+

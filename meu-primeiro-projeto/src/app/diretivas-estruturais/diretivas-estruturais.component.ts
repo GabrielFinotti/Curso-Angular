@@ -14,15 +14,16 @@ export class DiretivasEstruturaisComponent implements OnInit {
     { nome: 'Finotti', idade: 20 },
     { nome: 'Paula', idade: 49 },
   ];
+  public nome: string = 'Dener';
 
   ngOnInit(): void {
-    // setInterval(() => {
-    //   if (this.condition) {
-    //     this.condition = !this.condition;
-    //   } else {
-    //     this.condition = true;
-    //   }
-    // }, 2000);
+    setInterval(() => {
+      if (this.condition) {
+        this.condition = !this.condition;
+      } else {
+        this.condition = true;
+      }
+    }, 2000);
   }
 
   public onClick() {
@@ -40,5 +41,16 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public onClickEventList(event: number) {
     // elimina um valor de um array de acordo com o seu index;
     this.list.splice(event, 1);
+  }
+
+  public trocarNome() {
+    if (this.nome == 'Dener') {
+      this.nome = 'Finotti';
+    } else if (this.nome == 'Finotti') {
+      this.nome = 'Nay';
+    } else {
+      this.nome = 'Dener';
+    }
+    return this.nome;
   }
 }
