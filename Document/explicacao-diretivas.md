@@ -13,6 +13,8 @@ As diretivas são separadas de algumas formas, como: - Diretivas de atrivuto - e
 
         NgModel: adiciona vinculação de dados bidirecional a um elemento de formulário HTML.
 
+        Pipes: Funções prontas de formatação que pode ser personaliza, para seus tipos acessar a documentação do Angular.
+
 2. Diretivas estruturais
     Elas moldam ou remodelam a estrutura do DOM, adicionando, removendo e manipulando os elementos do host aos quais estão anexados.
 

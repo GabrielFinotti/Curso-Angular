@@ -1,3 +1,4 @@
+<ng-content select="h1"></ng-content>
 <!-- Utilizado para mudar valores de classes -->
 <h1 [ngClass]="{ active: valor, disabled: !valor }">NgClass</h1>
 <br /><br />
@@ -19,3 +20,19 @@
 <br /><br />
 <hr />
 <h1>NgTemplate</h1>
+<!-- Faz a verificação da condição antes mesmo de renderizar o conteudo! -->
+<ng-template ngIf="true">
+  <p>true</p>
+</ng-template>
+<br /><br />
+<hr />
+<h1>NgContent</h1>
+<!-- Permite receber valores de 'fora' do templete e redirecionalo para a posição desejada, também permintindo valores dinâmicos independente do conteúdo! -->
+<ng-content select="hr"></ng-content>
+<br /><br />
+<hr />
+<!-- Funções prontas de formatação que pode ser personaliza, para seus tipos acessar a documentação do Angular -->
+<h1>Pipes</h1>
+<p>
+  {{ date | date : "dd/MM/yyyy" }}
+</p>

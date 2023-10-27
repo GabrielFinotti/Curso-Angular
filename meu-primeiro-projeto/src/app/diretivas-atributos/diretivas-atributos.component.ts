@@ -11,6 +11,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public backgroundColor: string = 'green';
   public nome!: string;
   public list!: Array<{ nome: string }>;
+  public date: Date = new Date();
 
   ngOnInit(): void {
     setInterval(() => {
@@ -31,7 +32,7 @@ export class DiretivasAtributosComponent implements OnInit {
   }
 
   public salvarNome(): void {
-    if (this.list == null) {
+    if (this.list == null || '') {
       this.list = [];
       this.list.push({ nome: this.nome });
       this.nome = '';
