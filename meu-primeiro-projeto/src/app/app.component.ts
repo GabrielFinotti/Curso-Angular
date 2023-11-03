@@ -28,6 +28,10 @@ export class AppComponent
 
   public valor: number = 1;
   public destruir: boolean = true;
+  public addValue: number = 10;
+
+  public getDados!: { nome: string; idade: number };
+
   constructor() {}
 
   public adicionar(): number {
@@ -36,6 +40,14 @@ export class AppComponent
 
   public destruirComponent() {
     this.destruir = false;
+  }
+
+  public add() {
+    this.addValue += 1;
+  }
+
+  public setDados(event: { nome: string; idade: number }) {
+    this.getDados = event;
   }
 
   ngOnInit(): void {}

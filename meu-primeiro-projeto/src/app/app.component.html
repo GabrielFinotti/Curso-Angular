@@ -22,17 +22,17 @@
   Diretiva Angular
  -->
 
-  <!-- Diretivas estruturais -->
-    <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
+<!-- Diretivas estruturais -->
+<!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
 
-  <!-- Diretivas de Atributos -->
-    <!-- <app-diretivas-atributos>
+<!-- Diretivas de Atributos -->
+<!-- <app-diretivas-atributos>
       <h1>NgContent funcionando</h1>
       <hr>
     </app-diretivas-atributos>
     <router-outlet></router-outlet> -->
-  <!-- Pipes -->
-    <!-- <app-diretivas-atributos></app-diretivas-atributos>
+<!-- Pipes -->
+<!-- <app-diretivas-atributos></app-diretivas-atributos>
     <router-outlet></router-outlet> -->
 
 <!--
@@ -45,6 +45,13 @@
 <!--
   Comunicação entre componentes
  -->
-
-
-
+<!-- Input -->
+<!-- <app-input [contador]="addValue"></app-input>
+    <button type="button" (click)="add()">Adicionar</button>
+    <router-outlet></router-outlet> -->
+<!-- Output -->
+<ng-template [ngIf]="getDados">
+  <h1>{{ getDados.nome }}</h1>
+  <h2>{{ getDados.idade }}</h2>
+</ng-template>
+<app-output (enviarDados)="setDados($event)"></app-output>
