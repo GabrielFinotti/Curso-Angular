@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +10,6 @@ import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodAddComponent } from './food-add/food-add.component';
 
-
 @NgModule({
   declarations: [
     NewComponentComponent,
@@ -18,7 +18,7 @@ import { FoodAddComponent } from './food-add/food-add.component';
     FoodListComponent,
     FoodAddComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   exports: [
     NewComponentComponent,
     InputComponent,
