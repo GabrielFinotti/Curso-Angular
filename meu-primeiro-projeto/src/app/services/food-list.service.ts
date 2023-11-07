@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+// Module Interface
 import { FoodList } from '../module/food-list';
 
 @Injectable({
@@ -12,6 +14,14 @@ export class FoodListService {
 
   //Inutlizado pois estamos utilizando o fake server
   // private list: Array<string> = ['X bacon', 'Feijão', 'Ovo'];
+
+  // Como utilizar httpHeaders
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
+
   private url: string = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) {}
