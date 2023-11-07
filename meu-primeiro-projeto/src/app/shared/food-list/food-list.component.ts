@@ -8,7 +8,7 @@ import { FoodListService } from 'src/app/services/food-list.service';
   styleUrls: ['./food-list.component.scss'],
 })
 export class FoodListComponent implements OnInit {
-  public foodList!: Array<FoodList> | any;
+  public foodList!: Array<FoodList>;
 
   constructor(private foodListService: FoodListService) {}
 

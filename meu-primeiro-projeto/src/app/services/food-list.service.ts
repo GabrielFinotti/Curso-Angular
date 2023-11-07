@@ -19,8 +19,8 @@ export class FoodListService {
   // public foodList() {
   //   return this.list;
   // }
-  public foodList(): Observable<FoodList> {
-    return this.http.get<FoodList>(`${this.url}list-food`).pipe(
+  public foodList(): Observable<Array<FoodList>> {
+    return this.http.get<Array<FoodList>>(`${this.url}list-food`).pipe(
       (res) => res,
       (erro) => erro
     );
