@@ -25,15 +25,29 @@ export class FoodListService {
       (erro) => erro
     );
   }
-
-  public foddListAdd(value: string) {
-    // Reutilizando a função foodListAlert()
-    this.foodListAlert(value);
-    //Inutlizado pois estamos utilizando o fake server
-    // return this.list.push(value);
+  //Inutlizado pois estamos utilizando o fake server
+  // public foddListAdd(value: string) {
+  //   // Reutilizando a função foodListAlert()
+  //   this.foodListAlert(value);
+  //   return this.list.push(value);
+  // }
+  public foddListAdd(value: string): Observable<Array<FoodList>> {
+    return this.http
+      .post<Array<FoodList>>(`${this.url}list-food`, {
+        nome: value,
+      })
+      .pipe(
+        (res) => res,
+        (erro) => erro
+      );
   }
   // Criando a função para o envio do valor pelo emissor de evento
-  public foodListAlert(value: string) {
+
+  //Inutlizado pois estamos utilizando o fake server
+  // public foodListAlert(value: string) {
+  //   return this.emitEvent.emit(value);
+  // }
+  public foodListAlert(value: Array<FoodList>) {
     return this.emitEvent.emit(value);
   }
 }

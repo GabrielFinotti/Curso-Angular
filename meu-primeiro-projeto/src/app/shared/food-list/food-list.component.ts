@@ -26,7 +26,10 @@ export class FoodListComponent implements OnInit {
     // Se inscrever no evento para obter algum valor quando emitido
     // Essa valor pode ser um res (response) ou um erro(error)
     this.foodListService.emitEvent.subscribe(
-      (res) => alert(`Você add => ${res}`),
+      (res) => {
+        alert(`Você add => ${res.nome}`);
+        return this.foodList.push(res);
+      },
       (erro) => erro
     );
   }
