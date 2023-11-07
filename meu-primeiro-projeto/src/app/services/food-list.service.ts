@@ -41,7 +41,7 @@ export class FoodListService {
         (erro) => erro
       );
   }
-
+  // Funcção para editar valores
   public foodListEdit(value: string, id: number): Observable<Array<FoodList>> {
     return this.http
       .put<Array<FoodList>>(`${this.url}list-food/${id}`, {
@@ -52,7 +52,7 @@ export class FoodListService {
         (erro) => erro
       );
   }
-
+  // Função para deletar valores
   public foodListDelete(id: number): Observable<Array<FoodList>> {
     return this.http.delete<Array<FoodList>>(`${this.url}list-food/${id}`).pipe(
       (res) => res,

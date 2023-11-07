@@ -33,7 +33,7 @@ export class FoodListComponent implements OnInit {
       (erro) => erro
     );
   }
-
+  // Chamada da função parar deletar os valores
   public foodListDelete(id: number) {
     return this.foodListService.foodListDelete(id).subscribe(
       (res) => {
@@ -44,7 +44,7 @@ export class FoodListComponent implements OnInit {
       (erro) => erro
     );
   }
-
+  // Chamada da função para editar valores
   public foodListEdit(value: string, id: number) {
     return this.foodListService.foodListEdit(value, id).subscribe(
       (res) => console.log(res),
