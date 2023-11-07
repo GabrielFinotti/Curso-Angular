@@ -33,4 +33,22 @@ export class FoodListComponent implements OnInit {
       (erro) => erro
     );
   }
+
+  public foodListDelete(id: number) {
+    return this.foodListService.foodListDelete(id).subscribe(
+      (res) => {
+        this.foodList = this.foodList.filter((item) => {
+          return id !== item.id;
+        });
+      },
+      (erro) => erro
+    );
+  }
+
+  public foodListEdit(value: string, id: number) {
+    return this.foodListService.foodListEdit(value, id).subscribe(
+      (res) => console.log(res),
+      (erro) => erro
+    );
+  }
 }

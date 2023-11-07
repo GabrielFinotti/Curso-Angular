@@ -41,6 +41,24 @@ export class FoodListService {
         (erro) => erro
       );
   }
+
+  public foodListEdit(value: string, id: number): Observable<Array<FoodList>> {
+    return this.http
+      .put<Array<FoodList>>(`${this.url}list-food/${id}`, {
+        nome: value,
+      })
+      .pipe(
+        (res) => res,
+        (erro) => erro
+      );
+  }
+
+  public foodListDelete(id: number): Observable<Array<FoodList>> {
+    return this.http.delete<Array<FoodList>>(`${this.url}list-food/${id}`).pipe(
+      (res) => res,
+      (erro) => erro
+    );
+  }
   // Criando a função para o envio do valor pelo emissor de evento
 
   //Inutlizado pois estamos utilizando o fake server
