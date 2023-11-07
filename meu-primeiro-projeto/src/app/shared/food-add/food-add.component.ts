@@ -7,11 +7,9 @@ import { FoodListService } from 'src/app/services/food-list.service';
   styleUrls: ['./food-add.component.scss'],
 })
 export class FoodAddComponent {
-  public valor!: string;
   constructor(private foodListService: FoodListService) {}
 
   public listAddItem(value: string) {
     this.foodListService.foddListAdd(value);
-    this.valor = '';
   }
 }
