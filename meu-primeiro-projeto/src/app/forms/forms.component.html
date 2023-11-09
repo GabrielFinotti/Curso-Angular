@@ -1,9 +1,22 @@
 <form #form="ngForm">
   <label>
     Nome:
-    <input type="text" name="nome" ngModel required />
+    <input
+      type="text"
+      name="nome"
+      #nome="ngModel"
+      [ngModel]="nome.value"
+      required
+    />
+    <span *ngIf="nome.invalid && (nome.dirty && nome.touched)"> Invalid </span>
   </label>
   <br /><br />
+  <!-- Se é valido ou não -->
+  {{ nome.valid }}
+  <!-- Se ele foi "sujo", foi modificado ou não -->
+  {{ nome.dirty }}
+  <!-- Se ele foi tocado/selecionado ou não -->
+  {{ nome.touched }}
   <!-- {{ form.valid }} -->
   <!--
     valid
