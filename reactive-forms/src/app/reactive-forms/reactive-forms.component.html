@@ -1,9 +1,17 @@
 <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
-  <input type="text" formControlName="fristName" />
+  <label>
+    Nome:
+    <input type="text" formControlName="fristName" />
+  </label>
   <br />
-  <input type="text" formControlName="lastName" />
+  <br />
+  <label>
+    Sobrenome:
+    <input type="text" formControlName="lastName" />
+  </label>
   <p>
-    {{ cadastroForm.get("fristName")?.value }}
+    <!-- {{ cadastroForm.get("fristName")?.value }} -->
+    {{ cadastroForm.get("fristName")?.errors | json }}
   </p>
   <button type="submit">Enviar</button>
 </form>
