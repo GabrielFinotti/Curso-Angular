@@ -1,8 +1,24 @@
 <form #form="ngForm">
   <label>
     Nome:
-    <input type="text" name="nome" ngModel />
+    <input
+      type="text"
+      name="nome"
+      #name="ngModel"
+      [ngModel]="name.value"
+      required
+    />
   </label>
+  <span *ngIf="name.invalid && name.dirty && name.touched">Invalid</span>
+  <br /><br />
+  {{ name.valid }} {{ name.dirty }} {{ name.touched }}
+  <!-- Form.valid -->
+  <!--
+    valid: Verifica se o form está valido
+    invalid: Verifica se o form está invalido
+    dirty: Verifica se o form ja foi sujo
+    touched: Verifica se o forme ja foi tocado
+   -->
   <br /><br />
   <label>Masculino</label>
   <input type="radio" name="sexo" value="Masculino" ngModel />
@@ -25,7 +41,7 @@
   <select name="comidas" ngModel>
     <option value="" selected>Selecione sua comida</option>
     <option [ngValue]="item" *ngFor="let item of listComidas">
-      {{ item.comida }} - R${{item.preco}}
+      {{ item.comida }} - R${{ item.preco }}
     </option>
   </select>
 </form>
