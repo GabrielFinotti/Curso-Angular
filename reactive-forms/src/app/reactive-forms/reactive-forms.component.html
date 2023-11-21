@@ -17,6 +17,12 @@
     <input type="text" formControlName="lastName" />
   </label>
   <br /><br />
+  <label
+    >Email:
+    <input type="email" formControlName="email" />
+  </label>
+  <p>{{ cadastroForm.get("email")?.errors | json }}</p>
+  <br /><br />
   <input type="submit" value="Enviar" [disabled]="cadastroForm.invalid" />
   <p>{{ cadastroForm.get("fristName")?.errors | json }}</p>
 </form>

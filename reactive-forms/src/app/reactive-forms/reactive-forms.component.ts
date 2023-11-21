@@ -12,7 +12,15 @@ export class ReactiveFormsComponent {
   constructor(private formBuilder: FormBuilder) {
     this.cadastroForm = formBuilder.group({
       fristName: ['', Validators.required],
-      lastName: [''],
+      lastName: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(10),
+        ],
+      ],
+      email: ['', [Validators.required, Validators.email]],
     });
   }
 
