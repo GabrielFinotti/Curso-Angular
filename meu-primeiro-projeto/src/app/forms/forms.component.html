@@ -1,6 +1,17 @@
 <form #form="ngForm">
-  <label>Nome:</label>
-  <input type="text" name="nome" ngModel />
+  <label>
+    Nome:
+    <input type="text" name="nome" ngModel />
+  </label>
+  <br /><br />
+  <label>Masculino</label>
+  <input type="radio" name="sexo" value="Masculino" ngModel />
+  <br /><br />
+  <label>Feminino</label>
+  <input type="radio" name="sexo" value="Feminino" ngModel />
+  <br /><br />
+  <label>Outros</label>
+  <input type="radio" name="sexo" value="Outros" ngModel />
 </form>
 
 <p>{{ form.value | json }}</p>
