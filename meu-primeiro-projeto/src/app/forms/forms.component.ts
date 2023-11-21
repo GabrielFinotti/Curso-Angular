@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -14,5 +15,11 @@ export class FormsComponent {
       { comida: 'X-Bacon', preco: 11 },
       { comida: 'Coxinha', preco: 12 },
     ];
+  }
+
+  public submitForm(form: NgForm) {
+    if (form.valid) {
+      console.log(form.value);
+    }
   }
 }
