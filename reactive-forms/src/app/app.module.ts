@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+// Components
 import { AppComponent } from './app.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 

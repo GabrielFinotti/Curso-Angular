@@ -10,14 +10,13 @@ export class ReactiveFormsComponent {
   public cadastroForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.cadastroForm = this.formBuilder.group({
+    this.cadastroForm = formBuilder.group({
       fristName: ['', Validators.required],
-      lastName: [''],
-    });
+      lastName: ['']
+    })
   }
 
   public submitForm() {
-    console.log(this.cadastroForm.value);
-    console.log(this.cadastroForm.value.fristName);
+    console.log(this.cadastroForm.value)
   }
 }
