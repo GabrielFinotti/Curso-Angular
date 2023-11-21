@@ -17,6 +17,6 @@
     <input type="text" formControlName="lastName" />
   </label>
   <br /><br />
-  <input type="submit" value="Enviar" />
+  <input type="submit" value="Enviar" [disabled]="cadastroForm.invalid" />
   <p>{{ cadastroForm.get("fristName")?.errors | json }}</p>
 </form>

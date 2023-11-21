@@ -12,11 +12,15 @@ export class ReactiveFormsComponent {
   constructor(private formBuilder: FormBuilder) {
     this.cadastroForm = formBuilder.group({
       fristName: ['', Validators.required],
-      lastName: ['']
-    })
+      lastName: [''],
+    });
   }
 
   public submitForm() {
-    console.log(this.cadastroForm.value)
+    if (this.cadastroForm.valid) {
+      console.log(this.cadastroForm.value);
+      console.log(this.cadastroForm.value.fristName);
+      console.log(this.cadastroForm.value.lastName);
+    }
   }
 }
