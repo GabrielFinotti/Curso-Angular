@@ -8,7 +8,7 @@ export const routes: Routes = [
   {
     path: 'sobre',
     component: SobreComponent,
-    children: [{ path: 'gabriel', component: SobreComponent }],
+    children: [{ path: 'username', component: SobreComponent }],
   },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404' },
